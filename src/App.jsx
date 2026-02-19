@@ -1,14 +1,15 @@
 import { useState } from "react";
 import "./App.css";
 import Counter from "./components/Counter";
+import Layout from "./components/Layout";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <main>
+    <Layout>
       <Counter count={count} setCount={setCount} />
-    </main>
+    </Layout>
   );
 }
 
