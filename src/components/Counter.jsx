@@ -1,9 +1,9 @@
-export default function Counter({ count, setCount }) {
+export default function Counter({ count, onDecrement, onIncrement }) {
   return (
     <div>
-      <button onClick={() => setCount(count - 1)}>Decrement</button>
+      <button onClick={onDecrement}>Decrement</button>
       <p>Count: {count}</p>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <button onClick={onIncrement}>Increment</button>
     </div>
   );
 }

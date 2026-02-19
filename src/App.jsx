@@ -5,9 +5,21 @@ import Counter from "./components/Counter";
 function App() {
   const [count, setCount] = useState(0);
 
+  function handleIncrement() {
+    setCount(count + 1);
+  }
+
+  function handleDecrement() {
+    setCount(count - 1);
+  }
+
   return (
     <main>
-      <Counter count={count} setCount={setCount} />
+      <Counter
+        count={count}
+        onDecrement={handleDecrement}
+        onIncrement={handleIncrement}
+      />
     </main>
   );
 }
